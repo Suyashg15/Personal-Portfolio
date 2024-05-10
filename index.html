@@ -242,16 +242,17 @@
       </div>
       <div class="contact-form" data-aos="zoom-in">
         <form action="">
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Email" />
+          <input type="text" id="fullname" placeholder="Your Full Name"/>
+          <input type="email" id="email_id" placeholder="Email" />
           <textarea
             name=""
-            id=""
+            id="message"
             cols="30"
             rows="10"
             placeholder="Write your Message Here ...."
           ></textarea>
-          <input type="submit" value="Send Message" class="send-btn" />
+          <!-- <input type="submit" value="Send Message" onclick="SendMail()" class="send-btn" /> -->
+          <button onclick="SendMail()" class="send-btn"> Send Message </button>
         </form>
       </div>
     </section>
@@ -271,6 +272,16 @@
         offset:300,
         duration:1400,
       });
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init({
+          publicKey: "F8noordMnjObcO6MH",
+        });
+      })();
     </script>
   </body>
 </html>
