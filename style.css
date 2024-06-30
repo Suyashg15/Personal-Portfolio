@@ -266,7 +266,7 @@ header.sticky{
 }
 .projects-content{
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+  grid-template-columns: repeat(auto-fit,minmax(250px,auto));
   align-items: center;
   gap: 2.3rem;
   margin-top: 4.2rem;
@@ -281,7 +281,7 @@ header.sticky{
 }
 
 .row{
-  height: 50vh;
+  height: auto;
   width: 100%;
   background: #2d343f;
   border-radius: 28px;
@@ -524,10 +524,19 @@ footer{
     right: 0;
   }
 }
-
+@media (max-width:900px){
+  .hero{
+    background: url("images/background-small.png");
+    background-size: cover;
+  }
+}
 @media (max-width:680px){
   .main-content p{
     width: 100%;
+  }
+  .hero{
+    background: url("images/background-small.png");
+    background-size: cover;
   }
 }
 @media (max-width:470px){
@@ -544,4 +553,5 @@ footer{
     object-fit: cover;
     margin: 0 auto;
   }
+  
 }
